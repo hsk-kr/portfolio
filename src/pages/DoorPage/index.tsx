@@ -46,7 +46,7 @@ const DoorPage: React.FC = () => {
 
   const navigateToAboutMe = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      history.push('/aboutme');
+      history.push('/home');
     },
     [history]
   );

@@ -3,16 +3,22 @@ import className from 'classnames/bind';
 import styles from './styles.module.scss';
 import SlideContents from 'containers/SlideContents';
 
+// components
+import ProfileSection from 'containers/ProfileSection';
+import PortfolioSection from 'containers/PortfolioSection';
+import ContactSection from 'containers/ContactSection';
+
 // resources
 const cx = className.bind(styles);
 
+const contents: React.ReactNode[] = [
+  <ProfileSection />,
+  <PortfolioSection />,
+  <ContactSection />,
+];
+
 const HomePage: React.FC = () => {
   const [contentsIdx, setContentsIdx] = useState<number>(0);
-  const [contents, setContents] = useState<React.ReactNode[]>([
-    <div onClick={() => setContentsIdx(1)}>Section1</div>,
-    <div>Section2</div>,
-    <div>Section3</div>,
-  ]);
 
   return (
     <div className={cx(styles['container'])}>

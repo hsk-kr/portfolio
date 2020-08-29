@@ -1,7 +1,7 @@
 @import 'styles/anims.scss';
 
 .container :global {
-  @include fadeIn(2s);
+  @include fadeIn(1s);
 }
 
 .container {
