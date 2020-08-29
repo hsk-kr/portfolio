@@ -1,0 +1,77 @@
+@import 'styles/anims.scss';
+
+// colors
+$green: #7bed9f;
+$green-bold: #2ed573;
+
+$default: #a4b0be;
+$default-bold: #747d8c;
+
+$disabled: #dfe6e9;
+$disabled-font: #b2bec3;
+
+// anims
+
+@keyframes _greenHoverAnim {
+  from {
+    background-color: $green;
+  }
+  to {
+    background-color: $green-bold;
+  }
+}
+
+@keyframes _defaultHoverAnim {
+  from {
+    background-color: $default;
+  }
+  to {
+    background-color: $default-bold;
+  }
+}
+
+// styles
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+
+  &:not(.disabled) {
+    &.green-btn {
+      background-color: $green;
+
+      &:hover {
+        background-color: $green-bold;
+
+        @include anim(_greenBtnAnim, 0.3s);
+      }
+    }
+
+    &.default-btn {
+      background-color: $default;
+
+      &:hover {
+        background-color: $default-bold;
+
+        @include anim(_defaultHoverAnim, 0.3s);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &.disabled {
+    color: $disabled-font;
+    background-color: $disabled;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}

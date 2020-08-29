@@ -1,0 +1,50 @@
+@import 'styles/anims.scss';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include fadeIn(2s);
+
+  .bg {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+  }
+
+  .contents {
+    width: 800px;
+
+    @media only screen and (max-width: 1024px) {
+      width: 80%;
+    }
+  }
+
+  .introduction {
+    width: 100%;
+    min-height: 200px;
+    height: fit-content;
+    box-sizing: border-box;
+
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 12px;
+
+    .introduction-text {
+      white-space: pre-wrap;
+      color: white;
+    }
+  }
+
+  .join-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

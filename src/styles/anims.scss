@@ -1,0 +1,27 @@
+@keyframes fadein {
+  from {
+    display: none;
+    opacity: 0;
+  }
+
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@mixin fadeIn($duration, $delay: 0s) {
+  -webkit-animation: $duration fadein $delay; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: $duration fadein $delay; /* Firefox < 16 */
+  -ms-animation: $duration fadein $delay; /* Internet Explorer */
+  -o-animation: $duration fadein $delay; /* Opera < 12.1 */
+  animation: $duration fadein $delay;
+}
+
+@mixin anim($anim, $duration) {
+  -webkit-animation: $duration $anim; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: $duration $anim; /* Firefox < 16 */
+  -ms-animation: $duration $anim; /* Internet Explorer */
+  -o-animation: $duration $anim; /* Opera < 12.1 */
+  animation: $duration $anim;
+}
