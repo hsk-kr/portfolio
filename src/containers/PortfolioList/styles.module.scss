@@ -1,0 +1,53 @@
+@import 'styles/common.scss';
+.portfolio-list {
+  width: 100%;
+  margin-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 25px;
+  column-gap: 25px;
+  padding-bottom: 150px;
+  @include noneSelect;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio {
+    height: 300px;
+    background-color: #fff;
+    @include boxShadow;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .portfolio-img {
+      flex: 4;
+      width: 100%;
+      object-fit: fill;
+      min-height: 0px;
+    }
+
+    .portfolio-title {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}

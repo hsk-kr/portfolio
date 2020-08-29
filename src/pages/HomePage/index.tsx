@@ -20,7 +20,7 @@ const contents: React.ReactNode[] = [
 ];
 
 const HomePage: React.FC = () => {
-  const [contentsIdx, setContentsIdx] = useState<number>(0);
+  const [contentsIdx, setContentsIdx] = useState<number>(1);
 
   const handleNavigate = useCallback((idx: number) => {
     setContentsIdx(idx);
