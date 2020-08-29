@@ -2,17 +2,17 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // components
-import DoorPage from 'containers/DoorPage';
-import AboutMePage from 'containers/AboutMePage';
+import DoorPage from 'pages/DoorPage';
+import HomePage from 'pages/HomePage';
 
 const RootRouter: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/aboutme">
-          <AboutMePage />
+        <Route path="/home">
+          <HomePage />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <DoorPage />
         </Route>
       </Switch>

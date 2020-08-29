@@ -1,0 +1,9 @@
+.sections {
+  display: flex;
+  position: absolute;
+
+  .section {
+    width: 100vw;
+    height: 100vh;
+  }
+}
