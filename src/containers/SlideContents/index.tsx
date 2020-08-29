@@ -22,6 +22,7 @@ const SlideContents: React.FC<Props> = ({ contents, index, delay = 1 }) => {
       {contents.map((section, idx) => {
         return (
           <div
+            key={idx}
             className={cx(styles['section'])}
             style={{ left: `calc(${idx * 100}%)` }}
           >

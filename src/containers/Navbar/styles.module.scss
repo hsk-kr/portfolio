@@ -1,0 +1,47 @@
+.navbar {
+  @media screen and (max-width: 1024px) {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-top: 1px solid #ececec;
+
+    svg {
+      flex: 1;
+
+      &:not(:last-child) {
+        border-right: 1px solid #ececec;
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    position: fixed;
+    right: 100px;
+    top: 50px;
+    z-index: 1;
+    display: grid;
+    grid-template: 1fr;
+    row-gap: 25px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+
+    svg {
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
+}
