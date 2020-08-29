@@ -1,4 +1,4 @@
-@keyframes fadein {
+@keyframes :global(fadein) {
   from {
     display: none;
     opacity: 0;

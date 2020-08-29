@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 
-// Components
-import HomePage from './containers/HomePage';
+// Routes
+import RootRouter from 'routes/RootRouter';
 
 function App() {
-  return <HomePage />;
+  return <RootRouter />;
 }
 
 export default App;

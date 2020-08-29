@@ -1,13 +1,15 @@
 @import 'styles/anims.scss';
 
+.container :global {
+  @include fadeIn(2s);
+}
+
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @include fadeIn(2s);
 
   .bg {
     z-index: -1;

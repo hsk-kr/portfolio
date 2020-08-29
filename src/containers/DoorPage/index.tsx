@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 import classNames from 'classnames/bind';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 // components
 import Button, { ButtonType } from 'components/Input/Button';
@@ -16,13 +17,15 @@ Could you help me learning English?
 INSTEAD! I make your app for FREE.
 I'm not sure I can make your app.
 BUT! I PROMISE. I'll do my best for YOU.`;
-const textAnimDelay = 50;
+const textAnimDelay = 1;
+// const textAnimDelay = 50;
 let once = false;
 
-const HomePage: React.FC = () => {
+const DoorPage: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [visibleTextLength, setVisibleTextLength] = useState<number>(0);
   const [btnEanbled, setBtnEnabled] = useState<boolean>(false);
+  const history = useHistory();
 
   const srtTextAnim = useCallback(() => {
     let textLength = 0;
@@ -41,6 +44,13 @@ const HomePage: React.FC = () => {
     setTimeout(timeoutCallback, textAnimDelay);
   }, []);
 
+  const navigateToAboutMe = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      history.push('/aboutme');
+    },
+    [history]
+  );
+
   useEffect(() => {
     if (!containerRef.current) return;
 
@@ -53,18 +63,19 @@ const HomePage: React.FC = () => {
   }, [srtTextAnim]);
 
   return (
-    <div className={cx('container')} ref={containerRef}>
+    <div className={cx(styles['container'])} ref={containerRef}>
       <img src={bgImg} alt="Home Background" className={cx('bg')} />
-      <div className={cx('contents')}>
-        <div className={cx('introduction')}>
-          <h1 className={cx('introduction-text')}>
+      <div className={cx(styles['contents'])}>
+        <div className={cx(styles['introduction'])}>
+          <h1 className={cx(styles['introduction-text'])}>
             {introText.substring(0, visibleTextLength)}
           </h1>
         </div>
         <Button
           type={ButtonType.Green}
-          className={cx('join-btn')}
+          className={cx(styles['join-btn'])}
           disabled={!btnEanbled}
+          onClick={navigateToAboutMe}
         >
           {btnEanbled ? 'OKAY' : 'Hmm...'}
         </Button>
@@ -73,4 +84,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default DoorPage;
