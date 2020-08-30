@@ -18,7 +18,7 @@ const ICON_SIZE = '3x';
 
 const Navbar: React.FC<Props> = ({ onNavigate, index }) => {
   return (
-    <div className={cx(styles['navbar'])}>
+    <div className={cx('navbar')}>
       <FontAwesomeIcon
         icon={faHome}
         size={ICON_SIZE}

@@ -13,84 +13,99 @@ const cx = className.bind(styles);
 const portfolios: Portfolio[] = [
   {
     title: 'Test',
-    introduction: 'test',
+    description:
+      'test\nfsdafadsfsdafasnsadfasdfasdf\nasdfasdfasdfasd\fnasdfasdfasdf\nasdfasdfasdfasnfasdfasdfasdfasdfasdfjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\nasdfasdfasdf\nasdfasfasdfasdfasf',
+    client: 'Lico',
+    imgSrcList: [Bg, Bg, Bg],
+    skills: [
+      'react',
+      'javascript',
+      'html',
+      'scss',
+      'css',
+      'webpack',
+      'docker',
+      'html',
+      'scss',
+      'css',
+      'webpack',
+      'docker',
+    ],
+  },
+  {
+    title: 'Test',
+    description:
+      'test\nfsdafadsfsdafasnsadfasdfasdf\nasdfasdfasdfasd\fnasdfasdfasdf\nasdfasdfasdfasnfasdfasdfasdfasdfasdfjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\nasdfasdfasdf\nasdfasfasdfasdfasf',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
   },
   {
     title: 'Test',
-    introduction: 'test',
-    client: 'Lico',
-    imgSrcList: [Bg],
-    skills: ['react'],
-  },
-  {
-    title: 'Test',
-    introduction: 'test',
+    description: 'test',
     client: 'Lico',
     imgSrcList: [Bg],
     skills: ['react'],
@@ -99,8 +114,8 @@ const portfolios: Portfolio[] = [
 
 const PortfolioSection: React.FC = () => {
   return (
-    <div className={cx(styles['container'])}>
-      <h1 className={cx(styles['title'])}>My Portfolios</h1>
+    <div className={cx('container')}>
+      <h1 className={cx('title')}>My Portfolios</h1>
       <PortfolioList portfolios={portfolios} />
     </div>
   );

@@ -13,7 +13,7 @@ interface Props {
 const SlideContents: React.FC<Props> = ({ contents, index, delay = 1 }) => {
   return (
     <div
-      className={cx(styles['sections'])}
+      className={cx('sections')}
       style={{
         transform: `translateX(-${index * 100}vw)`,
         transition: `${delay}s`,
@@ -23,7 +23,7 @@ const SlideContents: React.FC<Props> = ({ contents, index, delay = 1 }) => {
         return (
           <div
             key={idx}
-            className={cx(styles['section'])}
+            className={cx('section')}
             style={{ left: `calc(${idx * 100}%)` }}
           >
             {section}

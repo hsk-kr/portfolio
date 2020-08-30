@@ -43,24 +43,20 @@ const skills = [
 
 const ProfileSection: React.FC = () => {
   return (
-    <div className={cx(styles['container'])}>
-      <div className={cx(styles['profile-card'])}>
-        <CircleImage
-          src={imgMe}
-          size={200}
-          className={cx(styles['profile-image'])}
-        />
+    <div className={cx('container')}>
+      <div className={cx('profile-card')}>
+        <CircleImage src={imgMe} size={200} className={cx('profile-image')} />
         <h1>About Me</h1>
-        <p className={cx(styles['aboutme-text'])}>{aboutmeText}</p>
+        <p className={cx('aboutme-text')}>{aboutmeText}</p>
       </div>
-      <div className={cx(styles['skill-level-card'])}>
+      <div className={cx('skill-level-card')}>
         <h1>My Skills</h1>
         {skills.map((skill, idx) => (
           <SkillCard
             key={idx}
             name={skill.name}
             percentage={skill.percentage}
-            className={cx(styles['skill'])}
+            className={cx('skill')}
           />
         ))}
       </div>

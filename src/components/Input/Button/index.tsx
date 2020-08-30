@@ -45,7 +45,7 @@ const Button: React.FC<Props> = ({
   return (
     <div
       className={cx(
-        styles['button'],
+        'button',
         classNameByType(type),
         className,
         disabled ? 'disabled' : null

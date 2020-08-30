@@ -63,17 +63,17 @@ const DoorPage: React.FC = () => {
   }, [srtTextAnim]);
 
   return (
-    <div className={cx(styles['container'])} ref={containerRef}>
+    <div className={cx('container')} ref={containerRef}>
       <img src={bgImg} alt="Home Background" className={cx('bg')} />
-      <div className={cx(styles['contents'])}>
-        <div className={cx(styles['introduction'])}>
-          <h1 className={cx(styles['introduction-text'])}>
+      <div className={cx('contents')}>
+        <div className={cx('introduction')}>
+          <h1 className={cx('introduction-text')}>
             {introText.substring(0, visibleTextLength)}
           </h1>
         </div>
         <Button
           type={ButtonType.Green}
-          className={cx(styles['join-btn'])}
+          className={cx('join-btn')}
           disabled={!btnEanbled}
           onClick={navigateToAboutMe}
         >

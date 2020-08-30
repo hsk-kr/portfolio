@@ -18,10 +18,10 @@ const SkillCard: React.FC<Props> = ({ name, percentage, className }) => {
   };
 
   return (
-    <div className={cx(styles['skill-card'], className)}>
-      <span className={cx(styles['skill-name'])}>{name}</span>
-      <div className={cx(styles['gauge'])}>
-        <div className={cx(styles['progress'])} style={style} />
+    <div className={cx('skill-card', className)}>
+      <span className={cx('skill-name')}>{name}</span>
+      <div className={cx('gauge')}>
+        <div className={cx('progress')} style={style} />
       </div>
     </div>
   );

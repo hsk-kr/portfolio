@@ -1,0 +1,95 @@
+.portfolio-modal {
+  position: absolute;
+  z-index: 5;
+  left: 100vw;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .portfolio-modal-cover {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background: #00000070;
+  }
+
+  .portfolio-content {
+    z-index: 6;
+    width: 90%;
+    max-width: 1024px;
+    height: 90vh;
+    overflow-y: auto;
+    background-color: #fff;
+
+    .portfolio-toolbar {
+      height: auto;
+      border-bottom: 1px solid #ececec;
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 3px;
+      .modal-close-btn {
+        &:hover {
+          font-weight: bold;
+          transform: scale(1.2);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .portfolio-info {
+      width: calc(100% - 60px);
+      padding-left: 30px;
+      padding-bottom: 50px;
+
+      h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+      }
+      .portfolio-detail {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        font-family: OpenSans-Bold;
+        font-weight: bold;
+
+        .label {
+          margin-right: 10px;
+        }
+
+        .skills {
+          flex: 1;
+          flex-wrap: wrap;
+          display: flex;
+          align-items: center;
+
+          .skill {
+            font-size: 0.8em;
+            padding: 4px;
+            border-radius: 4px;
+            background-color: #54a0ff;
+            color: white;
+            margin-right: 4px;
+            margin-bottom: 4px;
+          }
+        }
+      }
+      .portfolio-description {
+        margin-top: 10px;
+        width: 100%;
+        min-height: 50px;
+        background-color: #ececec;
+        padding: 8px;
+        border-radius: 4px;
+        color: #737373;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
