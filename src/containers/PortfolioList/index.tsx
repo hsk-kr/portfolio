@@ -30,10 +30,8 @@ type ModalAction = { type: 'OPEN'; portfolioIdx: number } | { type: 'CLOSE' };
 
 const cx = className.bind(styles);
 const initModalState: ModalState = {
-  // visible: false,
-  // portfolioIdx: -1,
-  visible: true,
-  portfolioIdx: 0,
+  visible: false,
+  portfolioIdx: -1,
 };
 
 const modalReducer = (state: ModalState, action: ModalAction) => {

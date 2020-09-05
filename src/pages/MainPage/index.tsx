@@ -21,13 +21,12 @@ const contents: React.ReactNode[] = [
   <ContactSection />,
 ];
 
-const HomePage: React.FC = () => {
-  const [contentsIdx, setContentsIdx] = useState<number>(1);
+const MainPage: React.FC = () => {
+  const [contentsIdx, setContentsIdx] = useState<number>(0);
   const { navbarVisible } = useContext(AppContext);
 
   const handleNavigate = useCallback((idx: number) => {
     setContentsIdx(idx);
-    console.log(idx);
   }, []);
 
   return (
@@ -40,4 +39,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default MainPage;
