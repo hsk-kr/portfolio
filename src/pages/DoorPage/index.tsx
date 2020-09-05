@@ -12,13 +12,11 @@ import bgImg from 'resources/images/home-bg.jpg';
 const cx = classNames.bind(styles);
 
 const introText = `Hi! I'm Lico.
-A Junior Software Engineer in South Korea.
-Could you help me learning English?
-INSTEAD! I make your app for FREE.
-I'm not sure I can make your app.
-BUT! I PROMISE. I'll do my best for YOU.`;
-const textAnimDelay = 1;
-// const textAnimDelay = 50;
+I'm a junior Web Developer in South Korea.
+If you need my help, I'll help you!
+Don't worry. It's Free. No charges at all.
+If you want to know more about me, Come on in!`;
+const textAnimDelay = 50;
 let once = false;
 
 const DoorPage: React.FC = () => {
@@ -77,7 +75,7 @@ const DoorPage: React.FC = () => {
           disabled={!btnEanbled}
           onClick={navigateToAboutMe}
         >
-          {btnEanbled ? 'OKAY' : 'Hmm...'}
+          {btnEanbled ? 'YES!' : 'Hmm...'}
         </Button>
       </div>
     </div>

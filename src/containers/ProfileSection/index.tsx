@@ -11,12 +11,11 @@ import SkillCard from 'components/SkillCard';
 
 const cx = className.bind(styles);
 
-const aboutmeText = `My Korean name is Seong-Guk Han. 
-I'm using 'Lico' as my nickname. I really wanted to work abroad but I realized my english level is not enough to work abroad and my programming skills is also.
-So, I was thinking about that how can I make my english and career grow up together. 
-And that's why I've made up this website. I'll make simple apps you want. you just have to help me learning English as much as you can.
-My skills can be not enough to make your apps. but I'll try my best.
-(Your apps will show up in portfolio section in this site.)`;
+const aboutmeText = `My Korean name is SeongKuk Han. 
+I'm using 'Lico' as my nickname. I really want to work abroad but my English level is quite not good enough to work with foreigners and so is my programming skills.
+So, I was thinking about what can I do to make my English and career improve. 
+That's why I've made up this website. I'll help you as much as I can.
+I'll wait for your message!`;
 
 const skills = [
   {
